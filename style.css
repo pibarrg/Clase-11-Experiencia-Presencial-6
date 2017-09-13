@@ -2,7 +2,11 @@ body {
   background-color: #E0E0E0;
 }
 
-.row { clear: both;}
+* {
+  box-sizing: border-box;
+}
+
+.row { clear: both; }
 .row::before,
 .row::after {
     content: '';
@@ -11,12 +15,11 @@ body {
 
 .container {
   background-color: white;
-
   margin-left: auto;
   margin-right: auto;
-
   padding-left: 15px;
   padding-right: 15px;
+
 }
 
 @media (min-width: 576px) {
@@ -44,19 +47,29 @@ body {
 }
 
 header {
-  margin: 130px auto 0;
+  margin: 100px auto 0;
   text-align: center;
   height: 155px;
   border-bottom: 3px solid #E0E0E0;
 }
 
-.container header .fotoid {
+.container header .fotodiv {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 3px solid #E0E0E0;
   position: relative;
   bottom: 60px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.container header .fotodiv .fotoid {
+  -ms-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+  transform-origin: top center;
+  width: 100%;
 }
 
  .container header h1 {
@@ -68,9 +81,15 @@ header {
 }
 
 .container main {
-  width: 70%;
-  height: 30%;
+  width: 60%;
+  border: 1px solid black;
+  float: left;
+}
 
+.container aside {
+  width: 40%;
+  border: 1px solid black;
+  float: left;
 }
 
 .container main h2,
