@@ -20,6 +20,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
+  height: 500px;
 }
 
 @media (min-width: 576px) {
@@ -80,22 +81,109 @@ header {
   margin-top: -40px;
 }
 
-.container main {
+.container p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+  color: #696969;
+  text-align: justify;
+  margin: 0px;
+}
+
+.container .row main {
   width: 60%;
   border: 1px solid black;
   float: left;
 }
 
-.container aside {
+.container .row main .acercade {
+  padding: 5px 0px;
+}
+
+.container .row main .educacion {
+  padding: 2px;
+}
+
+.container .row main .educacion .año1 {
+
+}
+
+.container .row main .educacion .año2 {
+  margin-top: 11%;
+}
+
+.container .fecha p {
+  color: #000000;
+  font-weight: bold;
+}
+
+.container .fecha {
+  float: left;
+}
+
+.container .bubble {
+  position: relative;
+  width: 89%;
+  /* height: 0px; */
+  /* padding: 0px; */
+  background: #DCDCDC;
+  /* border-radius: 0px; */
+  /* margin: auto; */
+  padding: 8px;
+  right: -5.3%;
+  float: left;
+}
+
+.container .bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 12px 7px 0;
+  border-color: transparent #DCDCDC;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -12px;
+  top: 11px;
+  float: left;
+}
+
+.container .row aside {
   width: 40%;
   border: 1px solid black;
   float: left;
 }
 
-.container main h2,
-.container aside h2 {
+.container .row main h2,
+.container .row aside h2 {
   font-family: sans-serif;
   color: #FF7F50;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
+}
+
+.container .row main .experiencia {
+  padding: 2px;
+}
+
+.container .row main .experiencia .empresa1 {
+
+}
+
+.container .row main .experiencia .descripcion {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 12px 7px 0;
+  border-color: transparent #DCDCDC;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -12px;
+  top: 11px;
+  float: left;
+}
+
+.container .row main .experiencia .empresa2 {
+  margin-top: 11%;
 }
