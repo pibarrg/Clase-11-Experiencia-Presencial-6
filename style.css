@@ -209,6 +209,7 @@ body {
 
 .container .row aside .contacto ul {
   margin: 0px;
+  padding: 0px 0px 0px 19px;
 }
 
 .container .row aside .contacto ul li {
@@ -216,7 +217,6 @@ body {
   font-size: 10px;
   color: #696969;
   text-align: justify;
-  margin: 0px;
 }
 
 /* .aside .skills */
