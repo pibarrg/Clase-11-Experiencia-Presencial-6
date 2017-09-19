@@ -8,8 +8,7 @@ body {
 
 .row {
   clear: both;
-  display: table;
-  display: inline-block;
+
 }
 .row::before,
 .row::after {
@@ -54,7 +53,7 @@ body {
   margin: 100px auto 0;
   text-align: center;
   height: 155px;
-  border-bottom: 3px solid #E0E0E0;
+  border-bottom: 2px solid #E0E0E0;
 }
 
 .container header .fotodiv {
@@ -86,10 +85,9 @@ body {
 
 /* main */
 .container .row main {
+  float: left;
   width: 60%;
   border: 1px solid black;
-  float: left;
-  display: table-cell;
 }
 
 .container p {
@@ -196,10 +194,9 @@ body {
 
 /* .aside */
 .container .row aside {
+  float: left;
   width: 40%;
   border: 1px solid black;
-  float: left;
-  display: table-cell;
 }
 
 /* .aside .contacto */
@@ -333,12 +330,17 @@ body {
 /* .footer */
 .container .row footer {
   padding: 8px 0px;
-  border-bottom: 0px solid #E0E0E0;
-  clear: both;
+  border-top: 2px solid #E0E0E0;
+  width: 100%;
 }
 
 .container .row footer p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 8px;
+  color: #696969;
   text-align: right;
+
 }
 
 .clearfix{
