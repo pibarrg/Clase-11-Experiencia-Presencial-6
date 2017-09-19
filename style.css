@@ -6,7 +6,11 @@ body {
   box-sizing: border-box;
 }
 
-.row { clear: both; }
+.row {
+  clear: both;
+  display: table;
+  display: inline-block;
+}
 .row::before,
 .row::after {
     content: '';
@@ -19,8 +23,6 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  height: 500px;
 }
 
 @media (min-width: 576px) {
@@ -47,7 +49,8 @@ body {
   }
 }
 
-header {
+/* header */
+.container header {
   margin: 100px auto 0;
   text-align: center;
   height: 155px;
@@ -62,7 +65,7 @@ header {
   position: relative;
   bottom: 60px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 .container header .fotodiv .fotoid {
@@ -81,6 +84,14 @@ header {
   margin-top: -40px;
 }
 
+/* main */
+.container .row main {
+  width: 60%;
+  border: 1px solid black;
+  float: left;
+  display: table-cell;
+}
+
 .container p {
   font-family: sans-serif;
   font-weight: lighter;
@@ -90,26 +101,18 @@ header {
   margin: 0px;
 }
 
-.container .row main {
-  width: 60%;
-  border: 1px solid black;
-  float: left;
-}
-
+/* .main .acercade */
 .container .row main .acercade {
   padding: 5px 0px;
 }
 
+/* .main .educacion */
 .container .row main .educacion {
-  padding: 2px;
+  padding: 0px;
 }
 
-.container .row main .educacion .año1 {
+.container .row main .educacion .year1 {
 
-}
-
-.container .row main .educacion .año2 {
-  margin-top: 11%;
 }
 
 .container .fecha p {
@@ -121,25 +124,22 @@ header {
   float: left;
 }
 
-.container .bubble {
-  position: relative;
-  width: 89%;
+.container main .educacion .bubble {
+  width: 90%;
   /* height: 0px; */
   /* padding: 0px; */
   background: #DCDCDC;
   /* border-radius: 0px; */
   /* margin: auto; */
   padding: 8px;
-  right: -5.3%;
-  float: left;
+  float: right;
 }
 
 .container .bubble:after {
   content: '';
-  position: absolute;
   border-style: solid;
   border-width: 7px 12px 7px 0;
-  border-color: transparent #DCDCDC;
+  border-color: transparent black;
   display: block;
   width: 0;
   z-index: 1;
@@ -148,12 +148,44 @@ header {
   float: left;
 }
 
-.container .row aside {
-  width: 40%;
-  border: 1px solid black;
+.container .row main .educacion .year1 {
+  margin-bottom: 5px;
+}
+
+/* .main .experiencia */
+.container .row main .experiencia {
+  padding: 0px;
+}
+
+.container .row main .experiencia .empresa1 {
+
+}
+
+.container .fecha p {
+  color: #000000;
+  font-weight: bold;
+}
+
+.container .fecha {
   float: left;
 }
 
+.container main .experiencia .descripcion {
+  width: 82%;
+  /* height: 0px; */
+  /* padding: 0px; */
+  background: #DCDCDC;
+  /* border-radius: 0px; */
+  /* margin: auto; */
+  padding: 8px;
+  float: right;
+}
+
+.container .row main .experiencia .empresa1 {
+  margin-bottom: 5px;
+}
+
+/* .main y .aside */
 .container .row main h2,
 .container .row aside h2 {
   font-family: sans-serif;
@@ -162,28 +194,153 @@ header {
   font-weight: bold;
 }
 
-.container .row main .experiencia {
-  padding: 2px;
+/* .aside */
+.container .row aside {
+  width: 40%;
+  border: 1px solid black;
+  float: left;
+  display: table-cell;
 }
 
-.container .row main .experiencia .empresa1 {
-
+/* .aside .contacto */
+.container .row aside .contacto {
+  padding: 5px 0px;
 }
 
-.container .row main .experiencia .descripcion {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  border-width: 7px 12px 7px 0;
-  border-color: transparent #DCDCDC;
-  display: block;
-  width: 0;
-  z-index: 1;
-  left: -12px;
-  top: 11px;
+.container .row aside .contacto ul {
+  margin: 0px;
+}
+
+.container .row aside .contacto ul li {
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #696969;
+  text-align: justify;
+  margin: 0px;
+}
+
+/* .aside .skills */
+.container .row aside .skills .python {
+  width: 90%;
+  margin: 5px 0px;
+  background-color: #FF7F50;
+  font-family: sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 3px;
+}
+
+.container .row aside .skills .html {
+  width: 80%;
+  margin: 5px 0px;
+  background-color: #FF7F50;
+  font-family: sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 3px;
+}
+
+.container .row aside .skills .css {
+  width: 60%;
+  margin: 5px 0px;
+  background-color: #FF7F50;
+  font-family: sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 3px;
+}
+
+.container .row aside .skills .js {
+  width: 40%;
+  margin: 5px 0px;
+  background-color: #FF7F50;
+  font-family: sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 3px;
+}
+.container .row aside .skills .php {
+  width: 30%;
+  margin: 5px 0px;
+  background-color: #FF7F50;
+  font-family: sans-serif;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 3px;
+}
+
+/* .aside .idiomas */
+.container .row aside .idiomas {
+  padding: 5px 0px;
+}
+
+.container .row aside .idiomas .lenguaje {
+  border-bottom: 2px solid #E0E0E0;
+  padding: 0px 0px 16px 0px;
+}
+
+.container .row aside .idiomas .lenguaje p {
   float: left;
 }
 
-.container .row main .experiencia .empresa2 {
-  margin-top: 11%;
+.container .row aside .idiomas .lenguaje .star-icon {
+    color: #ddd;
+    font-size: 12px;
+    float: right;
+    z-index: 10;
+}
+
+
+/* .aside .hobbies */
+.container .row aside .hobbies {
+  padding: 5px 0px;
+}
+
+.container .row aside .hobbies .square-fotografia p {
+  font-family: sans-serif;
+  color: white;
+  background-color: #C54B8C;
+  margin-right: 2px;
+  padding: 3px;
+  float: left;
+}
+
+.container .row aside .hobbies .square-deporte p {
+  font-family: sans-serif;
+  color: white;
+  background-color: #C54B8C;
+  margin-right: 2px;
+  padding: 3px;
+  float: left;
+}
+
+.container .row aside .hobbies .square-musica p {
+  font-family: sans-serif;
+  color: white;
+  background-color: #C54B8C;
+  margin-right: 2px;
+  padding: 3px;
+  float: left;
+}
+
+
+
+/* .footer */
+.container .row footer {
+  padding: 8px 0px;
+  border-bottom: 0px solid #E0E0E0;
+  clear: both;
+}
+
+.container .row footer p {
+  text-align: right;
+}
+
+.clearfix{
+  clear: both;
 }
