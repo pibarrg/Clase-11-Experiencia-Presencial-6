@@ -122,7 +122,8 @@ body {
   float: left;
 }
 
-.container main .educacion .bubble {
+.container main .educacion .year1 .bubble,
+.container main .educacion .year2 .bubble {
   width: 90%;
   /* height: 0px; */
   /* padding: 0px; */
@@ -138,11 +139,6 @@ body {
   border-style: solid;
   border-width: 7px 12px 7px 0;
   border-color: transparent black;
-  display: block;
-  width: 0;
-  z-index: 1;
-  left: -12px;
-  top: 11px;
   float: left;
 }
 
